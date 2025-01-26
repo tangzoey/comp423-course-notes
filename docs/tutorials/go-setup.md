@@ -21,7 +21,7 @@ To begin, ensure your system is equipped with the following:
 
 ## Step-by-Step Instructions
 
-### 1. Set Up an Empty Project Directory
+### 1. Create a Blank Directory
 
 Begin by setting up a new empty directory for your project, and initialize a Git repository in this directory:
 
@@ -33,7 +33,7 @@ git init
 
 ---
 
-### 2. Configure the Dev Container
+### 2. Add Dev Container Configuration
 
 Set up a `.devcontainer` directory and create a `devcontainer.json` file within your project:
 
@@ -64,12 +64,11 @@ Edit `devcontainer.json` with the following content:
 
 ```
 
-**Explanation:**
-
-- ```"image"``` Specifies Microsoft's official Go development container image.
-- ```"extensions": ["golang.Go"]``` Ensures the Go extension for VSCode is automatically installed.
-- ```"go.useLanguageServer": true``` Configures Go tools to use the language server.
-- ```"postCreateCommand": "go version"``` Verifies the installed Go version after the container is built.
+!!! question "What is the effect of the above file?"
+    - ```"image"``` Specifies Microsoft's official Go development container image.
+    - ```"extensions": ["golang.Go"]``` Ensures the Go extension for VSCode is automatically installed.
+    - ```"go.useLanguageServer": true``` Configures Go tools to use the language server.
+    - ```"postCreateCommand": "go version"``` Verifies the installed Go version after the container is built.
 
 ---
 
@@ -165,10 +164,9 @@ Output:
 Hello COMP423
 ```
 
-**Discussion:**
-
-- The `go build` command is similar to the `gcc` command in COMP211, which compiles source code into an executable.
-- Unlike `go run`, `go build` creates a reusable binary that can be executed without Go installed.
+!!! note "Discussion: The difference between `go build` and `go run`"
+    - The `go build` command is similar to the `gcc` command in COMP211, which compiles source code into an executable.
+    - Unlike `go run`, `go build` creates a reusable binary that can be executed without Go installed.
 
 ---
 
