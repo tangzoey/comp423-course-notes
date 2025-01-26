@@ -5,36 +5,37 @@
 
 ## Prerequisites
 
-Before starting, ensure you have the following installed on your system:
+To begin, ensure your system is equipped with the following:
 
-- **Docker**  Docker is containerization platform. If Docker has not been installed, please go to [Docker Desktop](https://www.docker.com/products/docker-desktop/) to downlaod and install.
-- **Visual Studio Code**  [VSCode](https://code.visualstudio.com/) is the Integrated Development Environment (IDE) recommended here. 
-- **Dev Containers Extension**  installed inside Visual Studio Code.
+1. **Docker**  
+   Docker is essential for containerization. If you haven’t installed it yet, download it from [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+2. **Visual Studio Code (VSCode)**  
+   Use VSCode as the recommended Integrated Development Environment (IDE). It can be downloaded from [Visual Studio Code](https://code.visualstudio.com/).
+
+3. **Dev Containers Extension**  
+   Install the Dev Containers extension in Visual Studio Code to enable container-based development.
+
 
 ---
 
 ## Step-by-Step Instructions
 
-### 1. Create a Blank Directory
+### 1. Set Up an Empty Project Directory
 
-Start by creating a new blank directory for your project:
+Begin by setting up a new empty directory for your project, and initialize a Git repository in this directory:
 
 ```bash
 mkdir go-dev-container
 cd go-dev-container
-```
-
-Initialize a new Git repository:
-
-```bash
 git init
 ```
 
 ---
 
-### 2. Add Dev Container Configuration
+### 2. Configure the Dev Container
 
-Create a `.devcontainer` folder in your project directory and add a `devcontainer.json` file:
+Set up a `.devcontainer` directory and create a `devcontainer.json` file within your project:
 
 ```bash
 mkdir .devcontainer
@@ -65,14 +66,14 @@ Edit `devcontainer.json` with the following content:
 
 **Explanation:**
 
-- ```"image"``` Uses the official Microsoft Go Dev Container base image.
-- ```"extensions": ["golang.Go"]``` Ensures the Go VS Code plugin is installed.
+- ```"image"``` Specifies Microsoft's official Go development container image.
+- ```"extensions": ["golang.Go"]``` Ensures the Go extension for VSCode is automatically installed.
 - ```"go.useLanguageServer": true``` Configures Go tools to use the language server.
 - ```"postCreateCommand": "go version"``` Verifies the installed Go version after the container is built.
 
 ---
 
-### 3. Open the Project in a Dev Container
+### 3. Launch the Project in a Dev Container
 
 1. Open the project directory in VS Code.
 2. Use the Command Palette (`Ctrl+Shift+P`) and select `Dev Containers: Reopen in Container`.
@@ -100,7 +101,7 @@ Run the following command to initialize a new Go module:
 go mod init hello-comp423
 ```
 
-This creates a `go.mod` file, which tracks dependencies for your project.
+This command generates a `go.mod` file, which tracks dependencies for your project.
 
 ---
 
@@ -182,10 +183,6 @@ git commit -m "Initial setup with Hello COMP423"
 
 ---
 
-## Result Following the Tutorial
+## Tutorial Outcome
 
-An expected result of the go project is given at [Github](https://github.com/tangzoey/comp423-go-container).
-
-## Congratulations!
-
-You have successfully run your first go program!
+To see an example of the completed Go project, visit the following [GitHub repository](https://github.com/tangzoey/comp423-go-container).
