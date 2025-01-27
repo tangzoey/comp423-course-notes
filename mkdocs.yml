@@ -9,3 +9,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.details
   - admonition
+
+nav:
+  - Home: index.md
+  - Go Setup: tutorials/go-setup.md
